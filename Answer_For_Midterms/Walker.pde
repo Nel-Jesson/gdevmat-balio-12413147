@@ -1,6 +1,6 @@
 public class Walker {
   public PVector position = new PVector();
-  public float scale = random(5, 25); // 
+  public float scale = random(5, 25);
   public color c = color(random(255), random(255), random(255)); 
 
   public Walker(float x, float y) {
