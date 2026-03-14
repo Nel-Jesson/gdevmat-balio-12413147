@@ -12,19 +12,17 @@ public class Walker
     this.position = new PVector(random(Window.left, Window.right), random(Window.bottom, Window.top));
    }
    
-   public void update()
-   {
+   public void update() {
     PVector mouse = new PVector(mouseX - width/2, -(mouseY - height/2));
     PVector direction = PVector.sub(mouse, this.position);
     direction.normalize();
     this.acceleration = direction;
     this.acceleration.mult(0.2);
-    
-     this.acceleration = PVector.random2D();
-     this.velocity.add(this.acceleration);
-     this.velocity.limit(velocityLimit);
-     this.position.add(this.velocity);
-   }
+
+    this.velocity.add(this.acceleration);
+    this.velocity.limit(10);
+    this.position.add(this.velocity);
+}
    
    public void render()
    {     

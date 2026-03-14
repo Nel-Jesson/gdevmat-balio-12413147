@@ -8,8 +8,7 @@ void setup()
      
      for (int i = 0; i < walkers.length; i++) {
     walkers[i] = new Walker();
-    // Instructions: random scale
-    walkers[i].scale = random(10, 30);
+    walkers[i].scale = random(10, 25);
      }
 }
 
